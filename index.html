@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="/assets/logo.png">
+  <link href="styles/index.css" rel="stylesheet">
+  <link href="styles/general.css" rel="stylesheet">
+  <title>SyncVerse</title>
+</head>
+<body>
+  <section class="first-section">
+    <header>
+      <a class="logo-nav" href="index.html" style="text-decoration: none;"><img src="assets/syncverse-gradient.png"></a> 
+      <div class="first"><a class="navigation" href="#" style="text-decoration-color: white;"><p style="color: white; text-decoration-color: white;" onclick="smoothScroll(document.getElementById('last-section'))">Contattaci</p></a></div>
+    </header>
+    <div class="video-container">
+      <video id="bgVideo" preload="true" autoplay loop muted>
+        <source src="assets/video-bg.mp4" type="video/mp4" /> 
+      </video>  
+    </div>
+    <div class="main-hero">
+      <h2 class="title">
+        Investire é piú semplice di quanto pensi!
+      </h2>
+      <h2 class="sub-title">
+        Entra in <span class="sv-span" style="font-weight: bold;">SyncVerse</span> e scopri come far crescere i tuoi risparmi.
+      </h2>
+    </div>
+  </section>
+  <section class="second-section" style="background: #1f1f1f;">
+    <div class="rmap-container">
+      <img class="roadmap-syncverse" src="assets/roadmap-syncverse.png">
+    </div>
+    <div class="sv-desc-container">
+      <h2 class="sv-desc"><span class="sv-span" style="text-decoration: none; font-weight: bold;">SyncVerse</span> è la soluzione per chi vuole far 
+        lavorare i propri soldi in modo intelligente. 
+        Con il nostro sistema di copy trading, 
+        puoi seguire trader esperti e ottenere risultati in tempo reale.</h2>
+    </div>
+  </section>
+  <section class="third-section" style="background: #1f1f1f;">
+    <div class="sv-desc-container">
+      <h2 class="sv-desc" style="text-align: right;">
+        Iscriversi é 
+        <span class="sv-span" style="text-decoration: none; font-weight: bold;">semplice!</span><br>
+        Bastano tre semplici passi
+      </h2>
+    </div>
+    <div class="rmap-container">
+      <img class="roadmap-syncverse" src="assets/guide-sv.png">
+    </div>
+  </section>
+  <section id="last-section" class="last-section" style="background: #1f1f1f;">
+    <h2 class="wait">
+    Non aspettare! Inizia a far crescere i tuoi risparmi con <span class="sv-span" style="text-decoration: none; font-weight: bold;">SyncVerse</span>.
+    </h2>
+    <div class="contact-form-container">
+      <div class="form">
+        <div class="contact-form">
+          <h2>
+            Contattaci
+          </h2>
+          <form id="contact-form">
+            <div class="short-input-container">
+              <div class="input-box">
+                <input id="namefield" name="namefield" class="input-field" 
+                      type="text" required 
+                      placeholder="Nome*">
+                <label for="namefield">Nome*</label>
+              </div>
+              <div class="input-box">
+                <input id="surnamefield" name="surnamefield" class="input-field" 
+                      type="number" required 
+                      placeholder="Telefono*">
+                <label for="surnamefield">Telefono*</label>
+              </div>  
+            </div>
+            <div class="input-box">
+              <input id="userfield" name="userfield" class="input-field" 
+                    type="email" required 
+                    placeholder="Email*"
+                    autocomplete="on">
+              <label for="userfield">Email*</label>
+            </div>
+            <div class="input-box">
+              <textarea id="contactfield" name="contactfield" class="input-field-contact" 
+                    type="text" required 
+                    placeholder="Contattaci riguardo a SyncVerse..."
+                    autocomplete="off"
+                    maxlength="200"
+                    minlength="20"></textarea>
+              <label for="contactfield">Contattaci riguardo a SyncVerse...</label>
+            </div>
+            <button id="submit-button" type="submit" class="contact-submit-form">
+              INVIA
+            </button>  
+          </form>    
+        </div>
+      </div>  
+      <div class="other-contacts">
+        <div class="vl"></div>
+        <div class="our-contacts">
+          <div class="phone-mail-contacts">
+            <div class="contact-container">
+              <span class="icon"><ion-icon name="logo-whatsapp">
+              </ion-icon></span>
+              <h2>&#43;39 391 773 6746</h2>  
+            </div>
+            <div class="contact-container">
+              <span class="icon"><ion-icon name="mail-outline">
+              </ion-icon></span>         
+              <a href="mailto:tradeverseacademy@gmail.com" target="_blank">
+                <h2>tradeverseacademy@gmail.com</h2></a>
+            </div>
+          </div>  
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+    window.smoothScroll = function(target) {
+    var scrollContainer = target;
+    do { //find scroll container
+        scrollContainer = scrollContainer.parentNode;
+        if (!scrollContainer) return;
+        scrollContainer.scrollTop += 1;
+    } while (scrollContainer.scrollTop == 0);
+
+    var targetY = 0;
+    do { //find the top of target relatively to the container
+        if (target == scrollContainer) break;
+        targetY += target.offsetTop - 40;
+    } while (target = target.offsetParent);
+
+    scroll = function(c, a, b, i) {
+        i++; if (i > 30) return;
+        c.scrollTop = a + (b - a) / 30 * i;
+        setTimeout(function(){ scroll(c, a, b, i); }, 20);
+    }
+    // start scrolling
+    scroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
+    }
+  </script>
+</body>
+</html>
