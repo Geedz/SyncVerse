@@ -429,7 +429,16 @@ header img {
   color: white;
 }
 
-@media only screen and (max-width: 768px) {
+.nav {
+  display: flex;
+}
+
+.nav-tv {
+  padding-right: 20px;
+}
+
+
+@media only screen and (max-width: 1000px) {
   /* General body adjustments */
   html, body {
     padding: 0;
@@ -576,8 +585,162 @@ header img {
 
   .phone-mail-contacts {
     width: 100%;
+  }
+
+  .nav-tv {
+    padding-right: 10px;
+  }
+}
+
+
+@media only screen and (max-width: 768px) {
+  /* General body adjustments */
+  html, body {
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    width: 100%;
+  }
+
+  header {
+    width: 100vw;
+    flex-direction: row;
+    height: auto;
+    padding: 20px 30px;
+  }
+
+  header img {
+    width: 130px; /* Smaller logo for mobile */
+    padding-left: 0;
+  }
+  
+  .first {
+    padding-right: 0;
+  }
+
+  header p {
+    font-size: 14px;
+    padding-right: 0;
+    text-align: center;
+  }
+
+  .video-container {
+    height: 60vh;
+  }
+
+  .main-hero {
+    padding: 0px;
+    width: 100vw;
+    height: 70vh;
+  }
+
+  .first-section {
+    width: 100vw;
+    height: 70vh;
 
   }
 
+  .second-section {
+    flex-direction: column;
+  }
 
+  .third-section {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .last-section {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .main-hero h2 {
+    padding: 10px 10px;
+    text-align: center;
+    transform: translateY(220px);
+  }
+
+  .title {
+    font-size: 28px;
+    width: 100%;
+  }
+
+  .sub-title {
+    font-size: 16px;
+  }
+
+  .rmap-container {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .roadmap-syncverse {
+    width: 90%;
+    padding: 10px;
+  }
+
+  .sv-desc-container {
+    width: 100%;
+    height: 40%;
+    padding: 10px;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .sv-desc {
+    width: 90%;
+    font-size: 20px;
+    line-height: 28px;
+    text-align: center;
+    padding-bottom: 30px;
+  }
+
+  .wait {
+    font-size: 24px;
+    width: 90%;
+    padding: 10px;
+  }
+
+  .contact-form-container {
+    flex-direction: column;
+    width: 90%;
+    height: 50%;
+    padding: 20px;
+    margin: 10px 0;
+  }
+
+  .contact-form-container h2{
+    font-size: 18px;  
+    padding: 20px;
+  }
+
+  .input-field,
+  .input-field-short,
+  .input-field-contact {
+    width: 100%;
+  }
+
+  .contact-submit-form {
+    width: 100%;
+    font-size: 18px;
+    padding: 10px 0;
+  }
+
+  .our-contacts {
+    flex-direction: column;
+    justify-content: center;
+    position:absolute;
+    vertical-align: center;
+    width: 100%;
+    top: 400px;
+    right: 340px;
+  }
+
+  .form {
+    height: 100%;
+  }
+
+  .phone-mail-contacts {
+    width: 100%;
+  }
 }
